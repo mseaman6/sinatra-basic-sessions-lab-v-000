@@ -3,16 +3,15 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Shopping</title>
+    <title>Posts</title>
   </head>
   <body>
-    <h1>Shopping</h1>
+    <h1>Posts</h1>
 
-    <form action="/checkout" method="post">
-      <label>Item to Buy: </label><input type="text" name="item"><br>
-
-      <button type="submit" value="submit">Submit</button>
-      <!-- <input type="Submit" name="Submit"> -->
-    </form>
+    <% @posts.each do |post| %>
+      <div class="post">
+        <p>Name: <%= post.name %></p><br>
+      </div><br>
+    <% end %>
   </body>
 </html>
